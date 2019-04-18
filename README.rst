@@ -60,6 +60,10 @@ Discussion
 
 If you run into any issues you can file them in the `issue tracker`_.
 
+History
+~~~~~~~~~~
+This package was first developed by Vlastimil Pis at Amazon (Cambridge UK) as part of an outreach program to teach programming skills to teenagers. Its original location is https://github.com/means-to-meaning/FirstAlexaSkills/
+
 
 .. _`Alexa Skills Kit`: https://developer.amazon.com/alexa-skills-kit
 .. _`official ASK starter guide`: https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/getting-started-guide
