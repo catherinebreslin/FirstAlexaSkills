@@ -13,6 +13,18 @@ import random
 # --------------- Custom response logic ---------------------
 
 
+feminst_quotes = [
+    "I’m a feminist so I believe in inhabiting contradictions. Angela Davis",
+    "Do you have a vagina? And do you want to be in charge of it? If you said yes to both, then congratulations, you’re a feminist. Caitlin Moran",
+    "I am a feminist, and what that means to me is much the same as the meaning of the fact that I am Black. it means that I must undertake to love myself and to respect myself as though my very life depends upon self-love and self-respect. June Jordan"
+    ]
+
+education_quotes = [
+    "Quote one",
+    "Quote two",
+    "Quote 3"
+]
+
 def get_something():
     """
     Return a simple answer Alexa will give the user
@@ -23,7 +35,10 @@ def get_something():
 
 
 def get_quote(subject):
-    quote_dict = {"education": ["Quote one", "Quote two", "Quote 3"]}
+    quote_dict = {
+        "education": education_quotes,
+        "being a feminist": feminist_quotes,
+    }
     if subject in quote_dict:
         valid_answers = quote_dict[subject]
         speech_output = random.choice(valid_answers)
@@ -37,13 +52,17 @@ def get_person_fact(person_name):
     Finds a fact about a name
     """
     if person_name.lower() == 'catherine':
-        speech_output = 'catherine works on voice technology'
+        speech_output = "catherine works on voice technology"
     if person_name.lower() == 'charlotte':
-        speech_output = 'something about charlotte'
+        speech_output = "charlotte's spirit animal is a leopard"
     if person_name.lower() == 'conor':
-        speech_output = 'something about conor'
+        speech_output = "Conor is a designer living in London who loves Drag Queens"
     elif person_name.lower() == 'feminist internet':
-        speech_output = 'something about feminist internet'
+        speech_output = "Feminist Internet is on a mission to advance internet equality"
+    elif person_name.lower() == 'chimamanda ngozi adichie' or person_name.lower() == 'chimamanda':
+        speech_output = "Chimamanda Ngozi Adichie is a Nigerian feminist author"
+    elif person_name.lower() == 'roxanne':
+        speech_output = "Roxanne likes pink, will dance to Blurred Lines and occasionally fakes an orgasm"
     else:
         speech_output = 'i don\'t know much about ' + person_name
     return speech_output
