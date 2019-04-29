@@ -60,12 +60,12 @@ def intent_handler(intent, session):
 
     if intent['name'] == 'saySomethingIntent':
         speech_output = get_something()
-    elif intent['name'] == 'giveMeQuoteIntent':
-        subject = intent['slots']['Subject']['value']
-        speech_output = get_quote(subject)
     elif intent['name'] == 'personalFactIntent':
         person_name = intent['slots']['Person']['value']
         speech_output = get_person_fact(person_name)
+    elif intent['name'] == 'giveMeQuoteIntent':
+        subject = intent['slots']['Subject']['value']
+        speech_output = get_quote(subject)
     else:
         # this shouldn't occur unless we omit the implementation of some intent
         should_end_session = True
