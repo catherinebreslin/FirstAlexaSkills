@@ -22,10 +22,10 @@ def get_something():
     return speech_output
 
 
-def get_coolest(subject):
-    coolest_dict = {"movie": ["Lord of the rings", "Batman, the dark knight", "Indiana Jones"]}
-    if subject in coolest_dict:
-        valid_answers = coolest_dict[subject]
+def get_quote(subject):
+    quote_dict = {"education": ["Quote one", "Quote two", "Quote 3"]}
+    if subject in quote_dict:
+        valid_answers = quote_dict[subject]
         speech_output = random.choice(valid_answers)
     else:
         speech_output = "I don't know much about " + str(subject) + " yet"
@@ -60,9 +60,9 @@ def intent_handler(intent, session):
 
     if intent['name'] == 'saySomethingIntent':
         speech_output = get_something()
-    elif intent['name'] == 'whatsCoolIntent':
+    elif intent['name'] == 'giveMeQuoteIntent':
         subject = intent['slots']['Subject']['value']
-        speech_output = get_coolest(subject)
+        speech_output = get_quote(subject)
     elif intent['name'] == 'personalFactIntent':
         person_name = intent['slots']['Person']['value']
         speech_output = get_person_fact(person_name)
