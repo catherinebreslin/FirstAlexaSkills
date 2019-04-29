@@ -13,7 +13,7 @@ import random
 # --------------- Custom response logic ---------------------
 
 
-feminst_quotes = [
+feminist_quotes = [
     "I’m a feminist so I believe in inhabiting contradictions. Angela Davis",
     "Do you have a vagina? And do you want to be in charge of it? If you said yes to both, then congratulations, you’re a feminist. Caitlin Moran",
     "I am a feminist, and what that means to me is much the same as the meaning of the fact that I am Black. it means that I must undertake to love myself and to respect myself as though my very life depends upon self-love and self-respect. June Jordan"
