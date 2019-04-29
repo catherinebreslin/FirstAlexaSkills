@@ -37,9 +37,13 @@ def get_person_fact(person_name):
     Finds a fact about a name
     """
     if person_name.lower() == 'catherine':
-        speech_output = 'catherine works at amazon building models for alexa'
-    elif person_name.lower() == 'robogals':
-        speech_output = 'robogals was founded in 2008 in melbourne, australia'
+        speech_output = 'catherine works on voice technology'
+    if person_name.lower() == 'charlotte':
+        speech_output = 'something about charlotte'
+    if person_name.lower() == 'conor':
+        speech_output = 'something about conor'
+    elif person_name.lower() == 'feminist internet':
+        speech_output = 'something about feminist internet'
     else:
         speech_output = 'i don\'t know much about ' + person_name
     return speech_output
