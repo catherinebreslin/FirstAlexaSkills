@@ -32,7 +32,7 @@ gender_quotes = [
 ]
 
 equality_quotes = [
-    "I am not free while any woman is unfree, even when her shackles are very different from my own. Audrey Lorde",,
+    "I am not free while any woman is unfree, even when her shackles are very different from my own. Audrey Lorde",
     "Equality is not a concept. It's not something we should be striving for. It's a necessity. Equality is like gravity. We need it to stand on this earth as men and women. Joss Whedon",
     "To be equal does not mean you have to be the same. Eva Burrows"
 ]
