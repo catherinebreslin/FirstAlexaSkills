@@ -19,10 +19,34 @@ feminist_quotes = [
     "I am a feminist, and what that means to me is much the same as the meaning of the fact that I am Black. it means that I must undertake to love myself and to respect myself as though my very life depends upon self-love and self-respect. June Jordan"
     ]
 
-education_quotes = [
-    "Quote one",
-    "Quote two",
-    "Quote 3"
+women_quotes = [
+    "I am a Woman Phenomenally. Phenomenal Woman, that's me. Maya Angelou",
+    "I am not free while any woman is unfree, even when her shackles are very different from my own. Audrey Lorde",
+    "A woman is like a tea bag—you never know how strong she is until she gets in hot water. Eleanor Roosevelt"
+]
+
+gender_quotes = [
+    "I'm not ashamed to dress like a woman because I don't think it's shameful to be a woman. Iggy Pop",
+    "What kind of feminist am I today? A feminist hooked on testosterone, or a transgendered body hooked on feminism? Paul B Preciado ",
+    "Feminism involves so much more than gender equality and it involves so much more than gender. Angela Davis"
+]
+
+equality_quotes = [
+    "I am not free while any woman is unfree, even when her shackles are very different from my own. Audrey Lorde",,
+    "Equality is not a concept. It's not something we should be striving for. It's a necessity. Equality is like gravity. We need it to stand on this earth as men and women. Joss Whedon",
+    "To be equal does not mean you have to be the same. Eva Burrows"
+]
+
+freedom_quotes = [
+    "The idea of freedom is inspiring. But what does it mean? If you are free in a political sense but have no food, what's that? The freedom to starve?  Angela Davis",
+    "A huge part of being a feminist is giving other women the freedom to make choices you might not necessarily make yourself. Lena Dunham",
+    "I am not free while any woman is unfree, even when her shackles are very different from my own. Audrey Lorder"
+]
+
+power_quotes = [
+    "The thing women have yet to learn is nobody gives you power. You just take it. Roseanne Barr",
+    "The point is not for women simply to take power out of men’s hands, since that wouldn’t change anything about the world. It’s a question precisely of destroying that notion of power. Simone de Beauvoir",
+    "Feminism is a transformational force, an individual and social force. It is a way of looking at the world-a questioning of power/domination issues, an affirmation of women's energy. Charlotte Bunch"
 ]
 
 def get_something():
