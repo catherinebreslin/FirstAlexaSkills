@@ -13,6 +13,36 @@ import random
 # --------------- Custom response logic ---------------------
 
 
+maths_quotes = [
+    "Arithmetic is being able to count up to twenty without taking off your shoes. Mickey Mouse",
+    "I don’t think that everyone should become a mathematician, but I do believe that many students don’t give mathematics a real chance. Maryam Mirxakhani",
+    "Do not worry too much about your difficulty in mathematics, I can assure you that mine are still greater. Albert Einstein"
+    ]
+
+education_quotes = [
+    "One child, one teacher, one book and one pen can change the world. Malala Yousafzai.",
+    "A good education can lift you up into a life you never could have imagined. Michelle Obama.",
+    "Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family. Kofi Annan"
+]
+
+success_quotes = [
+    "Luck has nothing to do with it because I have spent many, many hours, countless hours, on the court working for my one moment in time, not knowing when it would come. Serera Williams",
+    "Success is not final, failure is not fatal. It is the courage to continue that counts. Winston Churchill.",
+    "I know of no single formula for success. But over the years I have observed that some attributes of leadership are universal and are often about finding ways of encouraging people to combine their efforts, their talents, their insights, their enthusiasm and their inspiration to work together. Queen Elizabeth the second"
+]
+
+science_quotes = [
+    "I am among those who think that science has great beauty. Marie Curie.",
+    "Kids should be allowed to break stuff more often. That's a consequence of exploration. Exploration is what you do when you don't know what you're doing. That's what scientists do every day. Neil deGrasse Tyson.",
+    "Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious. Stephen Hawking"
+]
+
+travel_quotes = [
+    "We're fighting for human advancement, to move the world ahead, for the advancement of human history. Exploration always involves risk. Mae Jemison." 
+    "I think you travel to search, and you come back home to find yourself there. Chimamanda Ngozi Adichie",
+    "Flying may not be all plain sailing, but the fun of it is worth the price. Amelia Earhart" 
+]
+
 def get_something():
     """
     Return a simple answer Alexa will give the user
@@ -22,10 +52,16 @@ def get_something():
     return speech_output
 
 
-def get_coolest(subject):
-    coolest_dict = {"movie": ["Lord of the rings", "Batman, the dark knight", "Indiana Jones"]}
-    if subject in coolest_dict:
-        valid_answers = coolest_dict[subject]
+def get_quote(subject):
+    quote_dict = {
+        "maths": maths_quotes,
+        "education": education_quotes,
+        "success": success_quotes,
+        "science": science_quotes,
+        "travel": travel_quotes,
+    }
+    if subject in quote_dict:
+        valid_answers = quote_dict[subject]
         speech_output = random.choice(valid_answers)
     else:
         speech_output = "I don't know much about " + str(subject) + " yet"
@@ -36,10 +72,23 @@ def get_person_fact(person_name):
     """
     Finds a fact about a name
     """
-    if person_name.lower() == 'catherine':
-        speech_output = 'catherine works at amazon building models for alexa'
-    elif person_name.lower() == 'robogals':
-        speech_output = 'robogals was founded in 2008 in melbourne, australia'
+
+    if person_name.lower() == 'chimamanda ngozi adichie' or person_name.lower() == 'chimamanda':
+        speech_output = "Chimamanda Ngozi Adichie is a feminist author. "
+    elif person_name.lower() == 'winston churchill':
+        speech_output = "winston churchill was british prime minister from 1940 to 1945 and again from 1951 to 1955."
+    elif person_name.lower() == 'amelia earhart':
+        speech_output = "amelia earhart was an American aviation pioneer. She was the first female aviator to fly solo across the Atlantic Ocean."
+    elif person_name.lower() == 'albert einstein was a physicist who developed the theory of relativity':
+        speech_output = "albert einstein"
+    elif person_name.lower() == 'kofi annan':
+        speech_output = "kofi annan was a Ghanaian diplomat who served as the seventh Secretary-General of the United Nations. Together with the U. N. he received the nobel peace prize in 2001"
+    elif person_name.lower() == 'serena williams':
+        speech_output = "serena williams is the world's number 1 female tennis player"
+    elif person_name.lower() == 'marie curie':
+        speech_output = "marie curie was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win twice, and the only person to win a Nobel Prize in two different sciences"
+    elif person_name.lower() == 'mae jemison':
+        speech_output = "mae jemison is an American engineer, physician and NASA astronaut. She became the first black woman to travel in space when she served as an astronaut aboard the Space Shuttle Endeavour"   
     else:
         speech_output = 'i don\'t know much about ' + person_name
     return speech_output
@@ -56,12 +105,12 @@ def intent_handler(intent, session):
 
     if intent['name'] == 'saySomethingIntent':
         speech_output = get_something()
-    elif intent['name'] == 'whatsCoolIntent':
-        subject = intent['slots']['Subject']['value']
-        speech_output = get_coolest(subject)
     elif intent['name'] == 'personalFactIntent':
         person_name = intent['slots']['Person']['value']
         speech_output = get_person_fact(person_name)
+    elif intent['name'] == 'giveMeQuoteIntent':
+        subject = intent['slots']['Subject']['value']
+        speech_output = get_quote(subject)
     else:
         # this shouldn't occur unless we omit the implementation of some intent
         should_end_session = True

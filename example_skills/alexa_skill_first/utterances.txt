@@ -2,5 +2,5 @@ saySomethingIntent say something
 saySomethingIntent tell me something
 personalFactIntent tell me a fact about {Person}
 personalFactIntent tell me something about {Person}
-whatsCoolIntent what is the coolest {Subject}
-whatsCoolIntent what is the best {Subject}
+giveMeQuoteIntent tell me a quote about {Subject}
+giveMeQuoteIntent say a quote about {Subject}

@@ -13,7 +13,7 @@
       ]
     },
     {
-      "intent": "whatsCoolIntent",
+      "intent": "giveMeQuoteIntent",
       "slots": [
         {
           "name": "Subject",
