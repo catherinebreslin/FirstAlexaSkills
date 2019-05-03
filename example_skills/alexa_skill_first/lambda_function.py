@@ -60,8 +60,12 @@ def get_something():
 
 def get_quote(subject):
     quote_dict = {
-        "education": education_quotes,
         "being a feminist": feminist_quotes,
+        "women": women_quotes,
+        "gender": gender_quotes,
+        "equality": equality_quotes, 
+        "freedom": freedom_quotes,
+        "power": power_quotes,
     }
     if subject in quote_dict:
         valid_answers = quote_dict[subject]
