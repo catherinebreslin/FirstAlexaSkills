@@ -80,7 +80,7 @@ def get_person_fact(person_name):
     Finds a fact about a name
     """
     if person_name.lower() == 'catherine':
-        speech_output = "catherine works on voice technology"
+        speech_output = "catherine builds voice and language technology at cobalt"
     if person_name.lower() == 'charlotte':
         speech_output = "charlotte's spirit animal is a leopard"
     if person_name.lower() == 'conor':
