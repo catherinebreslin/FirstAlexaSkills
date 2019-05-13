@@ -81,9 +81,9 @@ def get_person_fact(person_name):
     """
     if person_name.lower() == 'catherine':
         speech_output = "catherine builds voice and language technology at cobalt"
-    if person_name.lower() == 'charlotte':
+    elif person_name.lower() == 'charlotte':
         speech_output = "charlotte's spirit animal is a leopard"
-    if person_name.lower() == 'conor':
+    elif person_name.lower() == 'conor':
         speech_output = "Conor is a designer living in London who loves Drag Queens"
     elif person_name.lower() == 'feminist internet':
         speech_output = "Feminist Internet is on a mission to advance internet equality"
